@@ -1,0 +1,42 @@
+.subNavBar {
+    position: relative;
+    width: 100%;
+}
+.subNav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -125px;
+    width: 100%;
+}
+.subNav ul {
+    display: flex;
+    margin-left: 43px;
+    flex-direction: column;
+    height: 200px;
+    overflow: hidden;
+}
+
+.subNav ul:nth-child(3) {
+    margin-right: 10px;
+}
+.subNav ul:nth-child(5) {
+    margin-right: -10px;
+}
+.subNav ul li {
+    height: 15px;
+    margin: 7px auto;
+    width: 100%;
+}
+.subNav ul li:hover a {
+    color: #f36e21;
+} 
+.subNav ul li a {
+    font-size: 0.95rem;
+    line-height: 110%;
+    color: #444;
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-decoration: none;
+}

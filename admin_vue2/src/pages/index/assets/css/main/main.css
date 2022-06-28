@@ -1,0 +1,359 @@
+* {
+  text-decoration: none;
+  font-family: 'NanumSquare', sans-serif;
+}
+
+.main {
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+#container {
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+/* solution */
+.solution-box {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.solution-box h3 {
+  font-weight: bold;
+  color: #f36e21;
+  text-align: center;
+  padding: 30px 0 0 0;
+  font-size: 2rem;
+}
+.solution-box h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  margin: 15px auto 15px;
+  border-bottom: 1px solid #ccc;
+}
+.solution-box p {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+.solution-box ul {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+.solution-box ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 24%;
+  height: 230px;
+  padding: 20px 0;
+  transition: all ease-out 0.2s;
+}
+
+/* Hover effect */
+.solution-box ul li.list1 {
+  background: url(../../images/solution_images/ico_service1.png) no-repeat center 40px #fff;
+}
+.solution-box ul li.list1:hover {
+  background: url(../../images/solution_images/ico_service1_o.png) no-repeat center 40px #f36e21;
+}
+.solution-box ul li.list2 {
+  background: url(../../images/solution_images/ico_service2.png) no-repeat center 40px #fff;
+}
+.solution-box ul li.list2:hover {
+  background: url(../../images/solution_images/ico_service2_o.png) no-repeat center 40px #f36e21;
+}
+.solution-box ul li.list3 {
+  background: url(../../images/solution_images/ico_service3.png) no-repeat center 40px #fff;
+}
+.solution-box ul li.list3:hover {
+  background: url(../../images/solution_images/ico_service3_o.png) no-repeat center 40px #f36e21;
+}
+.solution-box ul li.list4 {
+  background: url(../../images/solution_images/ico_service4.png) no-repeat center 40px #fff;
+}
+.solution-box ul li.list4:hover {
+  background: url(../../images/solution_images/ico_service4_o.png) no-repeat center 40px #f36e21;
+} 
+
+.solution-box ul li:hover a{
+  color: #fff;
+}
+/* Hover effect end*/
+
+.solution-box ul li a {
+  display: block;
+  color: #222;
+  margin-top: 70px;
+  padding: 50px 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.solution_box ul li a::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 50px;
+  margin: 0 auto 30px;
+  background: #f36e21;
+}
+
+.solution-box ul li a img {
+  margin-bottom: 30px;
+}
+
+/* 회사 소개 */
+.company_box {
+  width: 100%;
+  background: url('../../images/main_company_bg.jpg') repeat-x left top;
+  padding-top: 20px;
+}
+.company_box h3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #3a3a3a;
+  text-align: center;
+  padding: 20px 0 50px 0;
+}
+.company_box_list {
+  max-width: 1170px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+/* 썸네일 */
+.thumbnailList {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  height: 480px;
+  margin-bottom: 80px;
+}
+.thumbnailList li {
+  position: relative;
+  margin: 0 0 0 10px;
+  box-shadow:4px 5px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 380px;
+}
+.thumbnailList li a {
+  border: 0;
+  text-align: left;
+  transition: all 0.5s;
+}
+.thumbnailList li a .img {
+  display: block;
+  height: 260px;
+  transition: transform 0.7s ease-out;
+}
+/* Hover effect */
+.thumbnailList li:hover .img,
+.thumbnailList li:focus .img { 
+  transform:scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 0, 0.01deg);
+} 
+.thumbnailList li a:before,
+.thumbnailList li a:after { 
+  content:''; 
+  position:absolute; top:0; right:0; bottom:0; left:0; 
+  z-index:1; opacity:0; 
+  -webkit-transition:opacity 0.7s, transform 0.7s; 
+  transition:opacity 0.7s, transform 0.7s; }
+.thumbnailList li a:before { 
+  z-index:1; 
+  border-top:2px solid #f36e21; 
+  border-bottom:2px solid #f36e21; 
+  transform:scale(0,1); }  
+.thumbnailList li a:after { 
+  z-index:1; 
+  border-left:2px solid #f36e21; 
+  border-right:2px solid #f36e21; 
+  transform:scale(1,0); }
+.thumbnailList li a:hover:before, .thumbnailList li a:hover:after,
+.thumbnailList li a:focus:before,.thumbnailList li a:focus:after { -webkit-transform:scale(1); -moz-transform:scale(1); -o-transform:scale(1); -ms-transform:scale(1); transform:scale(1); opacity:1; }
+/* Hover effect end*/
+
+.thumbnailList li a .txtwrap {
+  min-height: 220px;
+  padding: 40px;
+  background-color: #fff;
+  letter-spacing: -.6px;
+  line-height: 1.6;
+}
+.thumbnailList li a .txtwrap span {
+  font-weight: 500;
+  font-size: 26px;
+  color: #f36e21;
+}
+.thumbnailList li a .txtwrap .tit {
+  margin: 9px 0 0;
+  font-size: 9px 0 0;
+  font-weight: 400;
+  line-height: 34px;
+  color: #333;
+} 
+
+/* 보도자료 */
+.news_box {
+  max-width: 1170px;
+  overflow: hidden;
+  margin: 70px auto 90px;
+}
+.news_box_list {
+  width: 100%;
+  margin: 0;
+}
+.news_box_list h3 {
+  font-weight: bold;
+  color: #f36e21;
+  text-align: center;
+  padding: 30px 0 0 0;
+  font-size: 2rem;
+}
+.news_box h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  margin: 15px auto 15px;
+  border-bottom: 1px solid #ccc;
+}
+.news_list_area {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap
+}
+.news_list_area li {
+  width: 25%; padding:5px; box-sizing: border-box;
+}
+.news_list_area li .photo_btn {
+  display: block; width: 100%; height:100%;
+}
+.photo_btn .photo {
+  display: block; width: 100%; height: 150px; overflow: hidden;
+}
+.photo_btn .photo .photo_area {
+  display: block;  overflow: hidden;
+}
+.news_list_area li .photo_btn .photo .photo_area .img1 {
+  background-image: url(../../images/press/press1.jpeg) ;
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img2 {
+  background: url(../../images/press/press2.jpeg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img3 {
+  background: url(../../images/press/press3.jpeg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img4 {
+  background: url(../../images/press/press4.jpeg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img5 {
+  background: url(../../images/press/press5.jpeg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img6 {
+  background: url(../../images/press/press6.jpg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img7 {
+  background: url(../../images/press/press7.jpg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.photo_btn .photo .photo_area .img8 {
+  background: url(../../images/press/press8.jpg);
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.news_list_area li .info {
+  display: flex; flex-direction: column; justify-content: space-evenly; align-items: flex-start;
+  padding: 10px 15px;
+  height: 130px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.info .mar {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.info .title {
+  color: #333333;
+  font-weight: bold;
+  word-break: break-all;
+  font-size: 0.91rem;
+  font-family: "NanumSquare";
+  text-align: left;
+}
+.info .date {
+  font-size: 0.8rem;
+  padding-left: 2px;
+  text-align: left;
+  color: #bbbbbb;
+  font-family: "NanumSquare";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

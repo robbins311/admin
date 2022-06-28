@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+</head>
+<script>
+    function auth() {
+        $.ajax({
+                    type:"GET",
+                    url:'/Api/adminNoticeManager/getNoticeList',
+                    headers: {
+                        authorization: `${localStorage.getItem("token")}`,
+                      },
+                    data: {},
+                    success: function (res) {
+                            $('#data').val(res.result)
+                            $('#di').append(res.result)
+                    },
+                    error : function (res) {
+                        console.log(res.responseJSON.result)
+                        if (res.responseJSON.result == 'expired') {
+                            refresh()
+                        }
+                    }
+              });
+    }
+
+    function refresh() {
+        $.ajax({
+                    type:"POST",
+                    url:'/Api/adminUserManager/refreshUser',
+                    data: {
+                        access : `${localStorage.getItem("token")}`,
+                        refresh : `${localStorage.getItem("refresh")}`
+                    },
+                    success: function (response) {
+                        if (response.result === 200) {
+                            localStorage.setItem("token", response.access)
+                            auth()
+                        } 
+                    },
+                    error : function (res) {
+                        if (res.responseJSON.result == 'expired') {
+                            localStorage.removeItem("token")
+                            localStorage.removeItem("refresh")
+                            window.location.replace("/test.html")
+                        }
+                    }
+              });
+    }
+</script>
+<body>
+    여기는 메인 페이지
+    <p></p>
+    <div id="di"></div>
+    <textarea id="data" type="text"></textarea>
+    <button onclick='auth()' class="button is-link">로그인 검증 버튼</button>
+    <p></p>
+    <a href="localhost:5005/downlad/" download>클릭</a>
+</body>
+</html>

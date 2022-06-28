@@ -1,0 +1,36 @@
+{
+  "name": "withnetwork_node_vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "admin_vue2": "cd admin_vue2 && yarn serve",
+    "server": "nodemon ./server/index.js",
+    "swagger": "node ./server/swagger.js",
+    "DEV": "concurrently \"yarn swagger\" \"yarn server\" \"yarn admin_vue2\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "concurrently": "^7.2.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.2",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16",
+    "sass-loader": "^13.0.0",
+    "tiptap": "^1.32.2",
+    "tiptap-extensions": "^1.35.2",
+    "util": "^0.12.4",
+    "uuid": "^8.3.2",
+    "vue-simple-alert": "^1.1.1",
+    "vue2-editor": "^2.10.3"
+  }
+}

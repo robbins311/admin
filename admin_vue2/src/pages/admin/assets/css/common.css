@@ -1,0 +1,137 @@
+
+  /* Mobile responsive setting S */
+  @media (max-width:892px) {
+    .mobile {
+      display: block !important;
+    }
+    .pc {
+      display: none;
+    }
+    main {
+      z-index:99 !important;
+    }
+    .card {
+      z-index: 10 !important;
+      
+    }
+  }
+  /* Mobile responsive setting E */
+
+  .mobile {
+    display: none;
+  }
+
+  .row {
+    --bs-gutter-x: 0.3rem !important;
+  }
+  
+ /* 로그인 */
+  .login {
+    height: 100vh;
+    background-color: #1b1b1b;
+  }
+  .loginWrapper::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+  }
+  /* 메인 카드 기본양식 */
+  .card {
+    margin-bottom: 20px;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  }
+  .card-title {
+    margin-top: 5px;
+    font-size: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    }
+  .buttonLayout {
+        position: relative;
+        left: 0;
+    }
+  /* 카드 E */
+
+  /* breadcrumble */
+  #breadc {
+    font-size: 0.88rem !important;
+    margin-right: 15px !important;
+  }
+  #breadc a {
+    text-decoration: none !important;
+  }
+  #breadc a:hover {
+    color: #1b1b1b !important;
+  }
+  /* breadcrumble E */
+
+  /* 테이블 */
+  #my-table a { 
+    text-decoration: none !important; 
+    color: #1b1b1b !important; 
+  }
+  #my-table a:hover {
+    color: #0d6efd !important;
+  }
+  ::v-deep .tdSection {
+    text-align: center !important;
+  }
+  /* 테이블 E */
+
+  /* Form label Font */
+  .col-form-label {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .textLabel {
+      font-weight: bold;
+  }
+
+  /* Pagination */
+  .customPagination {
+    margin-top: 1.58rem;
+  }
+  .customPagination .page-item.active .page-link {
+    color: #000;
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+  .customPagination .page-item .page-link {
+    color: #666;
+  }
+  /* view Page Link & Form 양식 수정 전 파일 */
+  .modLink, .detailLink {
+    text-decoration: none;
+  }
+  /* 첨부파일 유무 확인 Icon */
+  .fileText {
+    font-size: 12px;
+    margin-left: 4px;
+    margin-right: 3.5px;
+  }
+  .fileIcon {
+    margin-left: 5.5px;
+  }
+
+  /* alert 창 */
+  .swal2-popup {
+    width: 30rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.85px;
+  }
+
+  /* editor */
+  .ql-align-right {
+    text-align: right !important;
+  }
+  .ql-align-center {
+    text-align: center !important;
+  }
+  .ql-align-left {
+    text-align: left !important;
+  }
+  .ql-align-justify {
+    text-align: justify !important;
+  }

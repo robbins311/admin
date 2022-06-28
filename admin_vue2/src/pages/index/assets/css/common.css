@@ -1,0 +1,84 @@
+/* CSS reset */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  font-family: 'NanumSquare', sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display:block;
+  font-family: 'NanumSquare', sans-serif;
+}
+
+nav ul, li {
+  list-style:none;
+  font-family: 'NanumSquare', sans-serif;
+}
+
+a {
+  font-family: 'NanumSquare', sans-serif;
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  text-decoration:none;
+}
+
+img {
+  vertical-align:top;
+}
+
+
+/* Font */
+* { font-family: 'NanumSquare', 'Noto Sans KR','Apple SD Gothic','맑은고딕', sans-serif; }
+
+
+@font-face {
+    font-family: 'NanumSquare';
+    src: url('../fonts/NanumSquareB.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquare';
+    src: url('../fonts/NanumSquareL.ttf') format('truetype');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquare';
+    src: url('../fonts/NanumSquareR.ttf') format('truetype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquare';
+    src: url('../fonts/NanumSquareEB.ttf') format('truetype');
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans KR','Apple SD Gothic','맑은고딕', 'sans-serif';
+    src: url('../fonts/AppleSDGothicNeoB.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR','Apple SD Gothic','맑은고딕', 'sans-serif';
+    src: url('../fonts/AppleSDGothicNeoL.ttf') format('truetype');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans KR','Apple SD Gothic','맑은고딕', 'sans-serif';
+    src: url('../fonts/AppleSDGothicNeoR.ttf') format('truetype');
+    font-weight: 400;
+  }
+
